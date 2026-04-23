@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RideMate Pro - Smart Carpool Startup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">RideMate Pro</div>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#rides">Rides</a></li>
+          <li><a href="#drivers">Drivers</a></li>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#search">Find Ride</a></li>
+          <li><a href="#offer">Offer Ride</a></li>
+          <li><a href="#calculator">Fare</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" title="Toggle Theme">
+            🌙
+          </button>
+          <button class="btn small-btn login-btn" id="openModalBtn">
+            Login
+          </button>
+          <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content reveal">
+        <span class="badge">🚀 Startup-Level Frontend Project</span>
+        <h1>Smart Carpool for College, Office & Daily Commute</h1>
+        <p>
+          RideMate Pro is a premium ride-sharing platform that helps students
+          and professionals reduce cost, save time, and travel safely with
+          verified users and smart route matching.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#search" class="btn primary">Find a Ride</a>
+          <a href="#offer" class="btn secondary">Offer a Ride</a>
+        </div>
+
+        <div class="hero-mini-stats">
+          <div class="mini-stat glass">
+            <h3 class="counter" data-target="1250">0</h3>
+            <p>Active Riders</p>
+          </div>
+          <div class="mini-stat glass">
+            <h3 class="counter" data-target="340">0</h3>
+            <p>Rides Today</p>
+          </div>
+          <div class="mini-stat glass">
+            <h3 class="counter" data-target="180">0</h3>
+            <p>₹K Saved</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal glass">
+        <h3>Live Platform Analytics</h3>
+        <div class="stat-box">
+          <span>4.9★</span>
+          <p>Average Rating</p>
+        </div>
+        <div class="stat-box">
+          <span>98%</span>
+          <p>Ride Match Success</p>
+        </div>
+        <div class="stat-box">
+          <span>24/7</span>
+          <p>Smart Support</p>
+        </div>
+        <div class="stat-box">
+          <span>500+</span>
+          <p>Verified Drivers</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features section" id="features">
+      <h2 class="section-title reveal">Why RideMate Pro?</h2>
+      <div class="feature-grid">
+        <div class="feature-card reveal glass">
+          <h3>Smart Matching</h3>
+          <p>
+            Find rides based on route, time, and preferred travel conditions.
+          </p>
+        </div>
+        <div class="feature-card reveal glass">
+          <h3>Verified Profiles</h3>
+          <p>
+            Travel with trusted users through ratings, history, and identity
+            verification.
+          </p>
+        </div>
+        <div class="feature-card reveal glass">
+          <h3>Fare Splitting</h3>
+          <p>
+            Automatically divide fuel and travel costs fairly among all
+            passengers.
+          </p>
+        </div>
+        <div class="feature-card reveal glass">
+          <h3>Eco Friendly</h3>
+          <p>
+            Reduce traffic congestion and carbon emissions with shared
+            commuting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Rides -->
+    <section class="rides section" id="rides">
+      <h2 class="section-title reveal">Available Rides</h2>
+
+      <div class="filter-buttons reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="college">College</button>
+        <button class="filter-btn" data-filter="office">Office</button>
+        <button class="filter-btn" data-filter="daily">Daily</button>
+      </div>
+
+      <div class="rides-grid" id="ridesGrid">
+        <div class="ride-card reveal glass" data-category="college">
+          <h3>Whitefield → Marathahalli</h3>
+          <p><strong>Driver:</strong> Arjun</p>
+          <p><strong>Time:</strong> 8:30 AM</p>
+          <p><strong>Fare:</strong> ₹90</p>
+          <p><strong>Seats:</strong> 3</p>
+          <button class="btn primary book-btn">Book Now</button>
+        </div>
+
+        <div class="ride-card reveal glass" data-category="office">
+          <h3>KR Puram → Electronic City</h3>
+          <p><strong>Driver:</strong> Priya</p>
+          <p><strong>Time:</strong> 9:00 AM</p>
+          <p><strong>Fare:</strong> ₹120</p>
+          <p><strong>Seats:</strong> 2</p>
+          <button class="btn primary book-btn">Book Now</button>
+        </div>
+
+        <div class="ride-card reveal glass" data-category="daily">
+          <h3>Indiranagar → MG Road</h3>
+          <p><strong>Driver:</strong> Rahul</p>
+          <p><strong>Time:</strong> 6:15 PM</p>
+          <p><strong>Fare:</strong> ₹70</p>
+          <p><strong>Seats:</strong> 4</p>
+          <button class="btn primary book-btn">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Driver Profiles -->
+    <section class="drivers section" id="drivers">
+      <h2 class="section-title reveal">Top Verified Drivers</h2>
+      <div class="driver-grid">
+        <div class="driver-card reveal glass">
+          <div class="driver-avatar">A</div>
+          <h3>Arjun Sharma</h3>
+          <p>4.9★ Rating</p>
+          <p>120+ rides completed</p>
+        </div>
+
+        <div class="driver-card reveal glass">
+          <div class="driver-avatar">P</div>
+          <h3>Priya Verma</h3>
+          <p>4.8★ Rating</p>
+          <p>95+ rides completed</p>
+        </div>
+
+        <div class="driver-card reveal glass">
+          <div class="driver-avatar">R</div>
+          <h3>Rahul Mehta</h3>
+          <p>4.7★ Rating</p>
+          <p>80+ rides completed</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="dashboard section" id="dashboard">
+      <h2 class="section-title reveal">User Dashboard Preview</h2>
+      <div class="dashboard-grid">
+        <div class="dashboard-card reveal glass">
+          <h3>Total Rides Joined</h3>
+          <p class="dashboard-number">28</p>
+        </div>
+        <div class="dashboard-card reveal glass">
+          <h3>Total Money Saved</h3>
+          <p class="dashboard-number">₹6,540</p>
+        </div>
+        <div class="dashboard-card reveal glass">
+          <h3>Carbon Reduced</h3>
+          <p class="dashboard-number">32 kg</p>
+        </div>
+        <div class="dashboard-card reveal glass">
+          <h3>Current Membership</h3>
+          <p class="dashboard-number">Premium</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Ride -->
+    <section class="search section" id="search">
+      <h2 class="section-title reveal">Find a Ride</h2>
+      <div class="form-container reveal glass">
+        <form id="searchForm">
+          <input type="text" id="fromLocation" placeholder="From" required />
+          <input type="text" id="toLocation" placeholder="To" required />
+          <input type="date" id="travelDate" required />
+          <button type="submit" class="btn primary">Search Ride</button>
+        </form>
+        <div id="searchResult" class="result-box"></div>
+      </div>
+    </section>
+
+    <!-- Offer Ride -->
+    <section class="offer section" id="offer">
+      <h2 class="section-title reveal">Offer a Ride</h2>
+      <div class="form-container reveal glass">
+        <form id="offerForm">
+          <input type="text" id="driverName" placeholder="Your Name" required />
+          <input
+            type="text"
+            id="offerFrom"
+            placeholder="Starting Point"
+            required
+          />
+          <input type="text" id="offerTo" placeholder="Destination" required />
+          <input
+            type="number"
+            id="seats"
+            placeholder="Available Seats"
+            required
+          />
+          <button type="submit" class="btn secondary">Offer Ride</button>
+        </form>
+        <div id="offerResult" class="result-box"></div>
+      </div>
+    </section>
+
+    <!-- Fare Calculator -->
+    <section class="calculator section" id="calculator">
+      <h2 class="section-title reveal">Fare Calculator</h2>
+      <div class="form-container reveal glass">
+        <form id="fareForm">
+          <input
+            type="number"
+            id="distance"
+            placeholder="Distance (km)"
+            required
+          />
+          <input
+            type="number"
+            id="fuelCost"
+            placeholder="Fuel Cost per km (₹)"
+            required
+          />
+          <input
+            type="number"
+            id="passengers"
+            placeholder="Number of Passengers"
+            required
+          />
+          <button type="submit" class="btn primary">Calculate Fare</button>
+        </form>
+        <div id="fareResult" class="result-box"></div>
+      </div>
+    </section>
+
+    <!-- Ride History -->
+    <section class="history section" id="history">
+      <h2 class="section-title reveal">Recent Ride History</h2>
+      <div class="table-container reveal glass">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Route</th>
+              <th>Fare</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12 Apr 2026</td>
+              <td>Whitefield → Marathahalli</td>
+              <td>₹90</td>
+              <td><span class="status completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td>14 Apr 2026</td>
+              <td>KR Puram → Electronic City</td>
+              <td>₹120</td>
+              <td><span class="status completed">Completed</span></td>
+            </tr>
+            <tr>
+              <td>18 Apr 2026</td>
+              <td>Indiranagar → MG Road</td>
+              <td>₹70</td>
+              <td><span class="status upcoming">Upcoming</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing section" id="pricing">
+      <h2 class="section-title reveal">Membership Plans</h2>
+      <div class="pricing-grid">
+        <div class="price-card reveal glass">
+          <h3>Basic</h3>
+          <p class="price">Free</p>
+          <ul>
+            <li>Unlimited ride search</li>
+            <li>Community access</li>
+            <li>Basic support</li>
+          </ul>
+          <button class="btn primary">Get Started</button>
+        </div>
+
+        <div class="price-card featured reveal glass">
+          <h3>Premium</h3>
+          <p class="price">₹199/mo</p>
+          <ul>
+            <li>Priority ride matching</li>
+            <li>Verified badge</li>
+            <li>Advanced insights</li>
+          </ul>
+          <button class="btn secondary">Choose Plan</button>
+        </div>
+
+        <div class="price-card reveal glass">
+          <h3>Business</h3>
+          <p class="price">₹499/mo</p>
+          <ul>
+            <li>Team dashboard</li>
+            <li>Route optimization</li>
+            <li>Priority support</li>
+          </ul>
+          <button class="btn primary">Contact Sales</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section" id="faq">
+      <h2 class="section-title reveal">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item reveal glass">
+          <button class="faq-question">Is RideMate safe to use?</button>
+          <div class="faq-answer">
+            <p>
+              Yes, RideMate includes verified profiles, ratings, and ride
+              history for safer travel.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal glass">
+          <button class="faq-question">How is the fare calculated?</button>
+          <div class="faq-answer">
+            <p>
+              The total trip cost is calculated based on fuel and distance, then
+              split among passengers.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal glass">
+          <button class="faq-question">
+            Can I use this for office commute?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes, this platform is designed for both students and working
+              professionals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter section">
+      <div class="newsletter-box reveal glass">
+        <h2>Get Ride Updates & Offers</h2>
+        <p>
+          Subscribe to receive weekly ride insights, discounts, and community
+          updates.
+        </p>
+        <form id="newsletterForm" class="newsletter-form">
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="btn primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+      <h2 class="section-title reveal">What Users Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal glass">
+          <p>
+            "This feels like a real startup website. Perfect for portfolio and
+            placement demo!"
+          </p>
+          <h4>- Kritika, Student</h4>
+        </div>
+        <div class="testimonial-card reveal glass">
+          <p>
+            "Very premium frontend design. Easy to explain in project viva and
+            looks modern."
+          </p>
+          <h4>- raushan sir, Developer</h4>
+        </div>
+        <div class="testimonial-card reveal glass">
+          <p>
+            "Amazing real-world project idea. Strong for resume because it
+            solves daily problems."
+          </p>
+          <h4>- Priya, Intern</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <h2 class="section-title reveal">Contact Us</h2>
+      <div class="form-container reveal glass">
+        <form id="contactForm">
+          <input
+            type="text"
+            id="contactName"
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            id="contactEmail"
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            id="contactMessage"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+        </form>
+        <div id="contactResult" class="result-box"></div>
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="authModal">
+      <div class="modal-content glass">
+        <span class="close-btn" id="closeModalBtn">&times;</span>
+        <h2>Login / Signup</h2>
+        <form id="authForm">
+          <input type="text" id="authName" placeholder="Enter Name" required />
+          <input
+            type="email"
+            id="authEmail"
+            placeholder="Enter Email"
+            required
+          />
+          <input
+            type="password"
+            id="authPassword"
+            placeholder="Enter Password"
+            required
+          />
+          <button type="submit" class="btn primary">Continue</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Back To Top -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>©️ 2026 RideMate Pro. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
